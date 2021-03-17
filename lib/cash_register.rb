@@ -16,21 +16,17 @@ class CashRegister
         @total += price * quanity
     end
 
-    def apply_discount
-        @total -= @total * @discount / 100
-        if @discount == 0
-            "There is no discount to apply."
-        else
-            "After the discount, the total comes to $#{@total}."
-        end
-    end
+  def apply_discount
+      @total -= @total * @discount / 100
+      if @discount == 0
+          "There is no discount to apply."
+      else
+          "After the discount, the total comes to $#{@total}."
+      end
+  end
 
-    def void_last_transaction
-        @total = @last_total
-    end
+  def void_last_transaction
+      @total = @last_total
+  end
   
-  
-  
-  
-
 end
